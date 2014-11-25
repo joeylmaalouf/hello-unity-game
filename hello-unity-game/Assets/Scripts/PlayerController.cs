@@ -34,12 +34,13 @@ public class PlayerController : MonoBehaviour
 			other.gameObject.SetActive(false);
 			++this.score;
 			this.UpdateText();
+			this.audio.Play();
 		}
 	}
 
 	void UpdateText()
 	{
 		this.scoreText.text = "Score: " + this.score.ToString();
-		if (this.score >= 8) this.victoryText.text = "Congratulations!\nYou Win!";
+		if (this.score >= 8) this.victoryText.text = "You Win!\nCongratulations!";
 	}
 }
